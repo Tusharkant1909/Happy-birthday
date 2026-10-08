@@ -1,0 +1,1634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Surbhi ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+body{
+    font-family:'DM Sans',sans-serif;
+    color:#fff;
+
+    background:
+        radial-gradient(circle at 20% 20%,rgba(255,80,170,.25),transparent 35%),
+        radial-gradient(circle at 80% 80%,rgba(130,70,255,.25),transparent 35%),
+        linear-gradient(135deg,#120918,#28132f,#0c0714);
+}
+
+/* ================= SCREEN ================= */
+
+.screen{
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:scale(1.06);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease,
+        visibility .7s;
+}
+
+.screen.active{
+    opacity:1;
+    visibility:visible;
+    transform:scale(1);
+}
+
+.content{
+    width:100%;
+    max-width:700px;
+    text-align:center;
+    position:relative;
+    z-index:5;
+}
+
+/* ================= TEXT ================= */
+
+h1,h2{
+    font-family:'Playfair Display',serif;
+}
+
+h1{
+    font-size:clamp(48px,9vw,90px);
+    line-height:1.05;
+    margin-bottom:20px;
+}
+
+h2{
+    font-size:clamp(32px,6vw,55px);
+}
+
+.small-text{
+    font-size:12px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color:#f5b7d4;
+    margin-bottom:25px;
+}
+
+.subtitle{
+    color:#dfcddc;
+    font-size:18px;
+    margin-bottom:35px;
+}
+
+/* ================= BUTTON ================= */
+
+.main-btn{
+    border:0;
+    outline:0;
+
+    padding:14px 27px;
+
+    border-radius:50px;
+
+    color:white;
+
+    font-size:15px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    background:linear-gradient(135deg,#ff5ca8,#9c5cff);
+
+    box-shadow:0 10px 35px rgba(255,92,168,.3);
+
+    transition:.3s ease;
+}
+
+.main-btn:hover{
+    transform:translateY(-3px) scale(1.03);
+}
+
+.main-btn:active{
+    transform:scale(.95);
+}
+
+.hidden{
+    display:none!important;
+}
+
+/* ================= GIFT ================= */
+
+.gift{
+    width:170px;
+    height:150px;
+
+    margin:0 auto 20px;
+
+    position:relative;
+
+    cursor:pointer;
+
+    animation:giftFloat 2s ease-in-out infinite;
+}
+
+.gift-box{
+    position:absolute;
+
+    width:150px;
+    height:110px;
+
+    bottom:0;
+    left:10px;
+
+    border-radius:8px;
+
+    background:linear-gradient(135deg,#ff4f9a,#c62e77);
+
+    box-shadow:0 20px 50px rgba(255,50,130,.35);
+}
+
+.gift-box span{
+    font-size:65px;
+
+    position:absolute;
+
+    left:42px;
+    top:22px;
+}
+
+.gift-lid{
+    position:absolute;
+
+    width:170px;
+    height:35px;
+
+    left:0;
+    top:30px;
+
+    z-index:2;
+
+    border-radius:8px;
+
+    background:linear-gradient(135deg,#ff72b0,#e83284);
+
+    transition:.7s ease;
+}
+
+.gift.opened .gift-lid{
+    transform:translateY(-80px) rotate(-8deg);
+}
+
+@keyframes giftFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+/* ================= GAME ================= */
+
+.game-card{
+
+    width:100%;
+    max-width:560px;
+
+    margin:auto;
+
+    padding:28px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.07);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.3);
+}
+
+.game-top{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+    font-size:13px;
+
+    color:#d8c7da;
+}
+
+.progress{
+    height:5px;
+
+    width:100%;
+
+    background:rgba(255,255,255,.1);
+
+    border-radius:10px;
+
+    margin-bottom:28px;
+
+    overflow:hidden;
+}
+
+.progress-bar{
+    height:100%;
+
+    width:33%;
+
+    border-radius:10px;
+
+    background:linear-gradient(
+        90deg,
+        #ff5ca8,
+        #a66cff
+    );
+
+    transition:.4s ease;
+}
+
+.game-emoji{
+    font-size:55px;
+
+    margin-bottom:10px;
+}
+
+.game-question{
+    font-family:'Playfair Display',serif;
+
+    font-size:28px;
+
+    margin-bottom:25px;
+}
+
+.options{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
+}
+
+.option{
+
+    padding:15px;
+
+    border-radius:15px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    background:rgba(255,255,255,.06);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    transition:.3s ease;
+}
+
+.option:hover{
+
+    background:rgba(255,92,168,.2);
+
+    transform:translateY(-2px);
+
+    border-color:#ff72b0;
+}
+
+.option.correct{
+
+    background:rgba(60,220,140,.25);
+
+    border-color:#5cf0a4;
+
+    animation:correct .4s ease;
+}
+
+.option.wrong{
+
+    background:rgba(255,70,100,.25);
+
+    border-color:#ff607a;
+
+    animation:shake .4s ease;
+}
+
+@keyframes correct{
+
+    50%{
+        transform:scale(1.05);
+    }
+}
+
+@keyframes shake{
+
+    25%{
+        transform:translateX(-7px);
+    }
+
+    50%{
+        transform:translateX(7px);
+    }
+
+    75%{
+        transform:translateX(-5px);
+    }
+}
+
+.game-message{
+
+    min-height:25px;
+
+    margin-top:20px;
+
+    font-size:14px;
+
+    color:#ffafd2;
+}
+
+/* GAME SUCCESS */
+
+.unlock{
+
+    animation:unlockReveal .8s ease;
+}
+
+.unlock-icon{
+
+    font-size:80px;
+
+    margin-bottom:15px;
+
+    animation:heartBeat 1.2s infinite;
+}
+
+@keyframes unlockReveal{
+
+    from{
+        opacity:0;
+        transform:scale(.7);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+/* ================= BIRTHDAY ================= */
+
+.cake{
+
+    font-size:75px;
+
+    margin-bottom:15px;
+
+    animation:cakeBounce 1.5s ease-in-out infinite;
+}
+
+@keyframes cakeBounce{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px) rotate(3deg);
+    }
+}
+
+.tiny-text{
+
+    font-size:12px;
+
+    letter-spacing:5px;
+
+    color:#f7afd0;
+
+    margin-bottom:20px;
+}
+
+.birthday-title{
+
+    font-size:clamp(48px,11vw,100px);
+}
+
+.birthday-title span{
+
+    display:block;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff8bc5,
+            #fff,
+            #c6a1ff
+        );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+}
+
+.birthday-subtitle{
+
+    color:#d9c8d9;
+
+    font-size:17px;
+
+    margin:25px auto 40px;
+
+    max-width:550px;
+}
+
+/* ================= LETTER ================= */
+
+.envelope{
+
+    font-size:90px;
+
+    cursor:pointer;
+
+    animation:envelopeFloat 2s infinite ease-in-out;
+}
+
+@keyframes envelopeFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px) rotate(2deg);
+    }
+}
+
+.letter{
+
+    max-width:580px;
+
+    margin:20px auto 30px;
+
+    padding:28px;
+
+    border-radius:20px;
+
+    text-align:left;
+
+    line-height:1.8;
+
+    color:#eadbe7;
+
+    background:rgba(255,255,255,.07);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    backdrop-filter:blur(15px);
+
+    animation:letterReveal .8s ease;
+}
+
+.letter p{
+    margin-bottom:16px;
+}
+
+.letter strong{
+
+    color:#ff8fc7;
+
+    display:block;
+
+    margin-top:20px;
+
+    font-size:18px;
+}
+
+@keyframes letterReveal{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ================= FINAL ================= */
+
+.final-screen{
+
+    background:
+        radial-gradient(circle at center,
+        rgba(147,74,190,.25),
+        transparent 45%),
+
+        linear-gradient(
+        135deg,
+        #090612,
+        #180c25
+        );
+}
+
+.final-heart{
+
+    font-size:75px;
+
+    animation:heartBeat 1.4s infinite;
+}
+
+@keyframes heartBeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.18);
+    }
+}
+
+.final-screen h1{
+
+    font-size:clamp(42px,8vw,75px);
+}
+
+.final-screen h1 span{
+
+    display:block;
+
+    color:#ff8fc8;
+}
+
+.final-message{
+
+    max-width:550px;
+
+    margin:20px auto 30px;
+
+    color:#d9c9db;
+
+    line-height:1.8;
+
+    font-size:17px;
+}
+
+.dob-card{
+
+    display:inline-block;
+
+    padding:25px 45px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.3);
+}
+
+.dob-label{
+
+    font-size:10px;
+
+    letter-spacing:4px;
+
+    color:#b9a9ba;
+
+    margin-bottom:10px;
+}
+
+.dob{
+
+    font-size:28px;
+
+    font-family:'Playfair Display',serif;
+
+    letter-spacing:4px;
+}
+
+.name{
+
+    margin-top:10px;
+
+    color:#ff8fc8;
+
+    letter-spacing:4px;
+
+    font-size:13px;
+}
+
+.final-wish{
+
+    margin-top:25px;
+
+    color:#f3d8e7;
+
+    font-size:15px;
+}
+
+.floating-hearts{
+
+    margin-top:25px;
+
+    letter-spacing:15px;
+
+    animation:floating 3s ease-in-out infinite;
+}
+
+@keyframes floating{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+/* ================= BACKGROUND ================= */
+
+.hearts::before,
+.hearts::after{
+
+    content:"♡  ✦  ♡  ✧  ♡  ✦  ♡";
+
+    position:fixed;
+
+    width:100%;
+
+    color:rgba(255,255,255,.08);
+
+    font-size:35px;
+
+    letter-spacing:30px;
+
+    animation:backgroundFloat 15s linear infinite;
+}
+
+.hearts::before{
+    top:20%;
+}
+
+.hearts::after{
+
+    top:70%;
+
+    animation-delay:-7s;
+}
+
+@keyframes backgroundFloat{
+
+    from{
+        transform:translateX(-10%);
+    }
+
+    to{
+        transform:translateX(10%);
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:600px){
+
+    .screen{
+        padding:18px;
+    }
+
+    h1{
+        font-size:48px;
+    }
+
+    .subtitle{
+        font-size:15px;
+    }
+
+    .gift{
+        transform:scale(.9);
+    }
+
+    .game-card{
+        padding:22px 17px;
+    }
+
+    .game-question{
+        font-size:24px;
+    }
+
+    .options{
+        grid-template-columns:1fr;
+    }
+
+    .option{
+        padding:13px;
+    }
+
+    .birthday-title{
+        font-size:52px;
+    }
+
+    .birthday-subtitle{
+        font-size:15px;
+    }
+
+    .cake{
+        font-size:60px;
+    }
+
+    .letter{
+
+        padding:22px;
+
+        font-size:14px;
+
+        max-height:52vh;
+
+        overflow-y:auto;
+    }
+
+    .dob-card{
+        padding:20px 25px;
+    }
+
+    .dob{
+        font-size:22px;
+    }
+
+    .final-message{
+        font-size:15px;
+    }
+
+    .main-btn{
+        padding:14px 22px;
+        font-size:14px;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+<div class="hearts"></div>
+
+
+<!-- =====================================================
+     STEP 1 — INTRO
+===================================================== -->
+
+<section class="screen active" id="step1">
+
+    <div class="content">
+
+        <div class="small-text">
+            ✨ A little surprise awaits you ✨
+        </div>
+
+        <h1>
+            Hey Surbhi...
+        </h1>
+
+        <p class="subtitle">
+            Someone has prepared something special for you.
+        </p>
+
+        <button
+            class="main-btn"
+            onclick="nextStep(2)"
+        >
+            Open Your Surprise 🎁
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     STEP 2 — GIFT
+===================================================== -->
+
+<section class="screen" id="step2">
+
+    <div class="content">
+
+        <div
+            class="gift"
+            onclick="openGift()"
+        >
+
+            <div class="gift-lid"></div>
+
+            <div class="gift-box">
+                <span>🎁</span>
+            </div>
+
+        </div>
+
+        <h2 id="giftText">
+            Tap the gift 🎁
+        </h2>
+
+        <br>
+
+        <button
+            class="main-btn hidden"
+            id="continueBtn"
+            onclick="nextStep(3)"
+        >
+            Wait... what's next? ✨
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     STEP 3 — GAME
+===================================================== -->
+
+<section class="screen" id="step3">
+
+    <div class="content">
+
+        <!-- GAME -->
+
+        <div class="game-card" id="gameCard">
+
+            <div class="small-text">
+                🎮 Birthday Challenge
+            </div>
+
+            <div class="game-top">
+
+                <span id="questionNumber">
+                    Question 1 of 3
+                </span>
+
+                <span id="score">
+                    ❤️ 0
+                </span>
+
+            </div>
+
+            <div class="progress">
+
+                <div
+                    class="progress-bar"
+                    id="progressBar"
+                ></div>
+
+            </div>
+
+            <div
+                class="game-emoji"
+                id="gameEmoji"
+            >
+                🎀
+            </div>
+
+            <div
+                class="game-question"
+                id="gameQuestion"
+            >
+                Ready for your birthday challenge?
+            </div>
+
+            <div
+                class="options"
+                id="options"
+            >
+
+                <button
+                    class="option"
+                    onclick="startGame()"
+                >
+                    Let's Go! 🚀
+                </button>
+
+            </div>
+
+            <div
+                class="game-message"
+                id="gameMessage"
+            >
+                Your surprise is locked... 🔐
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     STEP 4 — BIRTHDAY
+===================================================== -->
+
+<section class="screen" id="step4">
+
+    <div class="content">
+
+        <div class="cake">
+            🎂
+        </div>
+
+        <div class="tiny-text">
+            TODAY IS ALL ABOUT YOU
+        </div>
+
+        <h1 class="birthday-title">
+
+            Happy Birthday
+
+            <span>
+                Surbhi ❤️
+            </span>
+
+        </h1>
+
+        <p class="birthday-subtitle">
+
+            18 October 2002 —
+            the day the world got a little brighter ✨
+
+        </p>
+
+        <button
+            class="main-btn"
+            onclick="nextStep(5)"
+        >
+            I have something to say 💌
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     STEP 5 — LETTER
+===================================================== -->
+
+<section class="screen" id="step5">
+
+    <div class="content">
+
+        <div
+            class="envelope"
+            onclick="openLetter()"
+        >
+            💌
+        </div>
+
+        <h2>
+            For You, Surbhi
+        </h2>
+
+        <div
+            class="letter hidden"
+            id="letter"
+        >
+
+            <p>
+                Dear Surbhi,
+            </p>
+
+            <p>
+                On your special day, I just want to wish you
+                endless happiness, beautiful memories and
+                countless reasons to smile.
+            </p>
+
+            <p>
+                May this new chapter of your life bring you
+                everything your heart wishes for. ✨
+            </p>
+
+            <p>
+                Keep smiling, keep shining and always stay
+                the wonderful person you are.
+            </p>
+
+            <strong>
+                Happy Birthday, Surbhi! ❤️
+            </strong>
+
+        </div>
+
+        <button
+            class="main-btn hidden"
+            id="finalBtn"
+            onclick="nextStep(6)"
+        >
+            One last surprise... 🌙
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     STEP 6 — FINAL
+===================================================== -->
+
+<section class="screen final-screen" id="step6">
+
+    <div class="content">
+
+        <div class="final-heart">
+            ❤️
+        </div>
+
+        <h1>
+
+            Here's to another
+
+            <span>
+                beautiful year
+            </span>
+
+        </h1>
+
+        <p class="final-message">
+
+            May your smile always be brighter than the stars,
+            your dreams bigger than your fears,
+            and your days filled with beautiful moments.
+
+        </p>
+
+        <div class="dob-card">
+
+            <div class="dob-label">
+                BORN ON
+            </div>
+
+            <div class="dob">
+                18 • 10 • 2002
+            </div>
+
+            <div class="name">
+                SURBHI JOSHI
+            </div>
+
+        </div>
+
+        <p class="final-wish">
+            Happy Birthday once again! 🎂✨
+        </p>
+
+        <div class="floating-hearts">
+            ❤️ ✨ ❤️ ✨ ❤️
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONFETTI -->
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+
+<script>
+
+/* =====================================================
+   SCREEN NAVIGATION
+===================================================== */
+
+let currentStep = 1;
+
+function nextStep(step){
+
+    const current =
+        document.getElementById("step" + currentStep);
+
+    const next =
+        document.getElementById("step" + step);
+
+    if(!next) return;
+
+    current.classList.remove("active");
+
+    setTimeout(function(){
+
+        next.classList.add("active");
+
+    },100);
+
+    currentStep = step;
+
+
+    if(step === 4){
+
+        setTimeout(function(){
+
+            birthdayConfetti();
+
+        },500);
+
+    }
+
+    if(step === 6){
+
+        setTimeout(function(){
+
+            finalConfetti();
+
+        },500);
+
+    }
+
+}
+
+
+/* =====================================================
+   GIFT
+===================================================== */
+
+function openGift(){
+
+    const gift =
+        document.querySelector(".gift");
+
+    if(gift.classList.contains("opened")){
+        return;
+    }
+
+    gift.classList.add("opened");
+
+    document.getElementById("giftText").innerHTML =
+        "Wait... there's something inside! ✨";
+
+    setTimeout(function(){
+
+        document
+            .getElementById("continueBtn")
+            .classList.remove("hidden");
+
+        smallConfetti();
+
+    },900);
+
+}
+
+
+/* =====================================================
+   GAME
+===================================================== */
+
+const questions = [
+
+    {
+        emoji:"🎀",
+
+        question:"What's the most important thing today?",
+
+        options:[
+            "Work 😭",
+            "Surbhi's Birthday 🎂",
+            "Homework 📚",
+            "Nothing 😴"
+        ],
+
+        correct:1
+    },
+
+    {
+        emoji:"✨",
+
+        question:"How special is Surbhi today?",
+
+        options:[
+            "A little 😊",
+            "Very special 💕",
+            "SUPER SPECIAL 👑",
+            "I don't know 🤔"
+        ],
+
+        correct:2
+    },
+
+    {
+        emoji:"🎂",
+
+        question:"What should Surbhi receive today?",
+
+        options:[
+            "More work 😭",
+            "A boring day 😐",
+            "Happiness & lots of love ❤️",
+            "Nothing"
+        ],
+
+        correct:2
+    }
+
+];
+
+let questionIndex = 0;
+
+let gameScore = 0;
+
+
+/* START */
+
+function startGame(){
+
+    questionIndex = 0;
+
+    gameScore = 0;
+
+    loadQuestion();
+
+}
+
+
+/* LOAD QUESTION */
+
+function loadQuestion(){
+
+    const q =
+        questions[questionIndex];
+
+    document.getElementById("gameEmoji")
+        .innerText = q.emoji;
+
+    document.getElementById("gameQuestion")
+        .innerText = q.question;
+
+    document.getElementById("questionNumber")
+        .innerText =
+        `Question ${questionIndex + 1} of ${questions.length}`;
+
+    document.getElementById("score")
+        .innerText =
+        `❤️ ${gameScore}`;
+
+    document.getElementById("progressBar")
+        .style.width =
+        ((questionIndex + 1) / questions.length * 100) + "%";
+
+
+    const options =
+        document.getElementById("options");
+
+    options.innerHTML = "";
+
+
+    q.options.forEach(function(option,index){
+
+        const button =
+            document.createElement("button");
+
+        button.className = "option";
+
+        button.innerText = option;
+
+        button.onclick = function(){
+
+            answerQuestion(index,button);
+
+        };
+
+        options.appendChild(button);
+
+    });
+
+
+    document.getElementById("gameMessage")
+        .innerText =
+        "Choose carefully... 👀";
+
+}
+
+
+/* ANSWER */
+
+function answerQuestion(selected,button){
+
+    const q =
+        questions[questionIndex];
+
+
+    const buttons =
+        document.querySelectorAll(".option");
+
+
+    buttons.forEach(function(btn){
+
+        btn.disabled = true;
+
+    });
+
+
+    if(selected === q.correct){
+
+        button.classList.add("correct");
+
+        gameScore++;
+
+        document.getElementById("score")
+            .innerText =
+            `❤️ ${gameScore}`;
+
+        document.getElementById("gameMessage")
+            .innerText =
+            "Correct! ✨ You got it!";
+
+
+        smallConfetti();
+
+
+        setTimeout(function(){
+
+            questionIndex++;
+
+            if(questionIndex < questions.length){
+
+                loadQuestion();
+
+            }else{
+
+                gameComplete();
+
+            }
+
+        },900);
+
+    }else{
+
+        button.classList.add("wrong");
+
+        document.getElementById("gameMessage")
+            .innerText =
+            "Oops! Try again 😜";
+
+        setTimeout(function(){
+
+            button.classList.remove("wrong");
+
+            buttons.forEach(function(btn){
+
+                btn.disabled = false;
+
+            });
+
+        },600);
+
+    }
+
+}
+
+
+/* GAME COMPLETE */
+
+function gameComplete(){
+
+    const card =
+        document.getElementById("gameCard");
+
+
+    card.innerHTML = `
+
+        <div class="unlock">
+
+            <div class="unlock-icon">
+                🔓
+            </div>
+
+            <div class="small-text">
+                CHALLENGE COMPLETE
+            </div>
+
+            <h2>
+                You Passed! 🎉
+            </h2>
+
+            <p class="subtitle">
+                Score: ${gameScore}/3 ❤️
+                <br><br>
+                Your birthday surprise has been unlocked.
+            </p>
+
+            <button
+                class="main-btn"
+                onclick="nextStep(4)"
+            >
+                Unlock My Birthday Surprise 🎂
+            </button>
+
+        </div>
+
+    `;
+
+
+    birthdayConfetti();
+
+}
+
+
+/* =====================================================
+   LETTER
+===================================================== */
+
+function openLetter(){
+
+    document
+        .getElementById("letter")
+        .classList.remove("hidden");
+
+    document
+        .getElementById("finalBtn")
+        .classList.remove("hidden");
+
+    smallConfetti();
+
+}
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+function smallConfetti(){
+
+    confetti({
+
+        particleCount:80,
+
+        spread:80,
+
+        origin:{
+            y:.65
+        }
+
+    });
+
+}
+
+
+function birthdayConfetti(){
+
+    const duration =
+        5 * 1000;
+
+    const end =
+        Date.now() + duration;
+
+    const colors = [
+
+        "#ff5ca8",
+        "#ffcf70",
+        "#ffffff",
+        "#a98cff",
+        "#ff8bc5"
+
+    ];
+
+
+    (function frame(){
+
+        confetti({
+
+            particleCount:5,
+
+            angle:60,
+
+            spread:70,
+
+            origin:{
+                x:0
+            },
+
+            colors:colors
+
+        });
+
+
+        confetti({
+
+            particleCount:5,
+
+            angle:120,
+
+            spread:70,
+
+            origin:{
+                x:1
+            },
+
+            colors:colors
+
+        });
+
+
+        if(Date.now() < end){
+
+            requestAnimationFrame(frame);
+
+        }
+
+    })();
+
+}
+
+
+function finalConfetti(){
+
+    confetti({
+
+        particleCount:180,
+
+        spread:160,
+
+        startVelocity:35,
+
+        origin:{
+            y:.6
+        }
+
+    });
+
+}
+
+
+/* =====================================================
+   CLICK SPARKLES
+===================================================== */
+
+document.addEventListener("click",function(e){
+
+    if(
+        e.target.closest("button") ||
+        e.target.closest(".gift") ||
+        e.target.closest(".envelope")
+    ){
+        return;
+    }
+
+    confetti({
+
+        particleCount:15,
+
+        spread:40,
+
+        startVelocity:15,
+
+        origin:{
+            x:e.clientX / window.innerWidth,
+
+            y:e.clientY / window.innerHeight
+        },
+
+        scalar:.6
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
